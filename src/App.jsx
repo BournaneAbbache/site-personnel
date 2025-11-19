@@ -9,10 +9,10 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div style={{ display: "flex" }}>
+    <div className="app-container">
       <Sidebar />
 
-      <main style={{ padding: "20px", flex: 1 }}>
+      <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/recherche" element={<Research />} />
@@ -21,7 +21,7 @@ function App() {
           <Route path="/ressources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </main>
+      </div>
     </div>
   );
 }
