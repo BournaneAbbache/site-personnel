@@ -11,7 +11,10 @@
 
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden; /* évite le scroll horizontal */
 }
+
 
 /* Layout global */
 
@@ -319,11 +322,7 @@ body {
 /*        MOBILE (≤ 900px)   */
 /* ========================= */
 
-@media (max-width: 900px) {
-  /* Layout global : sidebar en haut, contenu en dessous */
-  .app-container {
-    flex-direction: column;
-  }
+
 
   .sidebar {
     width: 100%;
@@ -426,5 +425,10 @@ body {
     margin-top: 16px;
     justify-content: center;
     transform: none;
+  }
+  @media (max-width: 900px) {
+  /* Layout global : sidebar en haut, contenu en dessous */
+  .app-container {
+    flex-direction: column;
   }
 }
