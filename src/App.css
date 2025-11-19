@@ -11,13 +11,9 @@
 
 body {
   margin: 0;
-  max-width: 100%;
-  overflow-x: hidden; /* évite le scroll horizontal */
 }
 
-
 /* Layout global */
-
 .app-container {
   display: flex;
   min-height: 100vh;
@@ -35,7 +31,6 @@ body {
 }
 
 /* En-tête de la sidebar */
-
 .sidebar-header {
   display: flex;
   align-items: center;
@@ -65,7 +60,6 @@ body {
 }
 
 /* Navigation */
-
 .sidebar-nav {
   display: flex;
   flex-direction: column;
@@ -101,41 +95,31 @@ body {
 
 .main-content {
   flex: 1;
-  padding: 0;
-  background: transparent;
+  padding: 32px 40px;
+  background: #f3f4f6;
   overflow: auto;
 }
 
-/* Page d'accueil = hero */
+/* -------- HERO (Accueil) -------- */
 
 .hero-wrapper {
-  width: 100%;
-  height: 100vh;            /* plein écran */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;               /* ⬅︎ plus de blanc autour */
-  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
-
-
 .hero-card {
-  width: 100%;
-  max-width: 1400px;
-  height: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 40px;
+  gap: 40px;
+  padding: 40px 48px;
+  border-radius: 32px;
+  background: radial-gradient(circle at top left, #4f46e5, #1d4ed8 45%, #111827 95%);
   color: white;
-  padding: 60px;
+  min-height: 420px;
+  align-items: center;
   position: relative;
 }
 
-
 /* Colonne gauche */
-
 .hero-left {
   flex: 1.2;
 }
@@ -169,7 +153,6 @@ body {
 }
 
 /* Boutons */
-
 .hero-actions {
   display: flex;
   gap: 14px;
@@ -203,24 +186,38 @@ body {
   border: 1px solid rgba(148, 163, 184, 0.6);
 }
 
+/* Icônes sociales */
 .hero-socials {
   display: flex;
-  gap: 12px;
+  gap: 18px;
+  margin-top: 25px;
 }
 
 .social-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.6);
-  background: transparent;
+  font-size: 26px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.15);
   color: white;
-  cursor: pointer;
-  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s ease;
+  backdrop-filter: blur(6px);
+  border: none;
 }
 
-/* Colonne droite : photo */
+.social-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+}
 
+.btn-primary svg,
+.btn-secondary svg {
+  font-size: 16px;
+}
+
+/* Colonne droite : image */
 .hero-right {
   flex: 1;
   position: relative;
@@ -245,8 +242,7 @@ body {
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.6);
 }
 
-/* Indication "Défiler" */
-
+/* Défilement */
 .hero-scroll {
   position: absolute;
   bottom: 24px;
@@ -288,147 +284,4 @@ body {
   border-radius: 9px;
   background: rgba(248, 250, 252, 0.9);
   animation: scrollDotAnimation 1.4s ease-in-out infinite;
-}
-
-.hero-socials {
-  display: flex;
-  gap: 18px;
-  margin-top: 25px;
-}
-
-.social-btn {
-  font-size: 26px;
-  padding: 14px;
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.25s ease;
-  backdrop-filter: blur(6px);
-}
-
-.social-btn:hover {
-  background: rgba(255, 255, 255, 0.30);
-  transform: translateY(-4px);
-}
-.btn-primary svg,
-.btn-secondary svg {
-  font-size: 16px;
-}
-
-/* ========================= */
-/*        MOBILE (≤ 900px)   */
-/* ========================= */
-
-
-
-  .sidebar {
-    width: 100%;
-    height: auto;
-    padding: 12px 16px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border-right: none;
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .sidebar-header {
-    margin-bottom: 0;
-  }
-
-  .sidebar-nav {
-    flex-direction: row;
-    gap: 8px;
-  }
-
-  .nav-item {
-    padding: 6px 8px;
-    font-size: 12px;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding: 12px;
-  }
-
-  /* Hero pleine largeur, mais plus compact */
-  .hero-wrapper {
-    height: auto;
-    padding: 16px 0;
-    background: linear-gradient(135deg, #3b82f6, #1e3a8a);
-  }
-
-  .hero-card {
-    flex-direction: column-reverse; /* image en haut ou en bas selon ton goût */
-    padding: 20px;
-    border-radius: 24px;
-    min-height: auto;
-    gap: 24px;
-  }
-
-  .hero-right {
-    justify-content: center;
-  }
-
-  .hero-photo {
-    max-width: 220px;
-    border-radius: 24px;
-  }
-
-  .hero-photo-layer {
-    inset: 16px 6px 0 24px;
-    border-radius: 24px;
-  }
-
-  .hero-left {
-    text-align: left;
-  }
-
-  .hero-name {
-    font-size: 30px;
-  }
-
-  .hero-role {
-    font-size: 16px;
-  }
-
-  .hero-text {
-    font-size: 14px;
-    max-width: 100%;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-socials {
-    justify-content: flex-start;
-  }
-
-  .social-btn {
-    font-size: 20px;
-    padding: 10px;
-  }
-
-  .hero-scroll {
-    position: static;
-    margin-top: 16px;
-    justify-content: center;
-    transform: none;
-  }
-  @media (max-width: 900px) {
-  /* Layout global : sidebar en haut, contenu en dessous */
-  .app-container {
-    flex-direction: column;
-  }
 }

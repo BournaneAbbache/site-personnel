@@ -1,7 +1,5 @@
 import profile from "../assets/profile.jpg";
-import { FaLinkedin, FaTwitter, FaBook } from "react-icons/fa";
-import { FaEnvelope, FaDownload } from "react-icons/fa";
-
+import { FaLinkedin, FaTwitter, FaBook, FaEnvelope, FaDownload } from "react-icons/fa";
 
 function Home() {
   return (
@@ -19,19 +17,18 @@ function Home() {
             émergentes.
           </p>
 
-            <div className="hero-actions">
+          <div className="hero-actions">
             <button className="btn-primary">
-                <FaEnvelope style={{ marginRight: "8px" }} />
-                Me Contacter
+              <FaEnvelope style={{ marginRight: "8px" }} />
+              Me Contacter
             </button>
 
             <button className="btn-secondary">
-                <FaDownload style={{ marginRight: "8px" }} />
-                Télécharger CV
+              <FaDownload style={{ marginRight: "8px" }} />
+              Télécharger CV
             </button>
-            </div>
+          </div>
 
-          {/* ⭐ Nouvelle section avec les icônes modernes */}
           <div className="hero-socials">
             <a
               href="https://linkedin.com"

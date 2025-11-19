@@ -11,8 +11,7 @@ function App() {
   return (
     <div className="app-container">
       <Sidebar />
-
-      <div className="main-content">
+      <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/recherche" element={<Research />} />
@@ -21,7 +20,7 @@ function App() {
           <Route path="/ressources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
+      </main>
     </div>
   );
 }

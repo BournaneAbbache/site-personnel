@@ -9,6 +9,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter basename="/site-personnel">
       <App />
     </BrowserRouter>
-
   </React.StrictMode>
 );
